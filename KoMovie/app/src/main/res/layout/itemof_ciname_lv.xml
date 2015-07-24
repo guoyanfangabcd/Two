@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:id="@+id/above"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal"
+    android:padding="10dp"
+   >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DMC昌平影剧院"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:text="座"
+            android:layout_marginTop="5dp"
+            android:textSize="10sp"
+            android:textColor="#fff"
+            android:background="#00ff00"
+            />
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:background="@drawable/goupiao_cinema"
+        android:text="购票"
+        android:textColor="#ffffc704"
+        android:layout_alignParentRight="true"
+        android:textSize="15sp"
+        />
+</RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/above"
+        android:text="北京市昌平区鼓楼南街佳莲时代广场4层"
+        android:layout_marginLeft="10dp"
+        />
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/bottom_bar_kota_checked" android:state_checked="true" />
+    <item android:drawable="@mipmap/bottom_bar_kota_checked" android:state_selected="true" />
+    <item android:drawable="@mipmap/bottom_bar_kota_normal" />
+</selector><!-- From: file:/D:/AndroidStudioProjects/KoMovie/app/src/main/res/drawable/selector_home_tab_kota.xml -->

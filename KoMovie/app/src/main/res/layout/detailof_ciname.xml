@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/srcoll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/service"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/header_poster_cinema_default" />
+
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="170dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/baidumap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/cinema_detail_ic_location" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="地图"
+                            android:textColor="#fff" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/cinema_detail_ic_phone" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="电话"
+                            android:textColor="#fff" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@mipmap/cinema_detail_favor_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="收藏"
+                            android:textColor="#fff" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@+id/service"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="#fff"
+                >
+
+                <RadioButton
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/detail_cinema_btn"
+                    android:button="@null"
+
+                    android:gravity="center"
+                    android:text="快速购票"
+                    android:textColor="#ff000000" />
+
+                <RadioButton
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/detail_cinema_btn2"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="影院介绍"
+                    android:textColor="#ff000000" />
+
+                <RadioButton
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/detail_cinema_btn3"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="评论"
+                    android:textColor="#ff000000" />
+            </RadioGroup>
+
+            <FrameLayout
+                android:id="@+id/frameLayout_main_container1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button"
+                android:layout_alignParentBottom="true"
+                android:background="#fff"
+                 />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/hint"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#fff"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_back_oval" />
+
+        <com.qianfeng.myapplication.view.Scroll
+            android:layout_width="190px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="DMC昌平保利影剧院"
+            android:textColor="@android:color/white"
+
+            android:textSize="18sp">
+
+        </com.qianfeng.myapplication.view.Scroll>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_back_oval" />
+
+        <com.qianfeng.myapplication.view.Scroll
+            android:layout_width="190px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="DMC昌平保利影剧院"
+            android:textColor="@android:color/white"
+
+            android:textSize="18sp">
+
+        </com.qianfeng.myapplication.view.Scroll>
+
+    </LinearLayout>
+</RelativeLayout>

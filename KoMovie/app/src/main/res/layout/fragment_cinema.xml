@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/ic_location_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_location_city" />
+
+        <TextView
+            android:id="@+id/text_beijing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ic_location_city"
+            android:text="北京"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/logo_komovie_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/logo_komovie_title" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_search_blue" />
+    </RelativeLayout>
+
+    <com.qianfeng.myapplication.view.MyScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top">
+        <!--<android.support.v4.view.ViewPager
+            android:id="@+id/vp_ciname"
+            android:layout_width="match_parent"
+
+            android:layout_height="80dp"></android.support.v4.view.ViewPager>
+    -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:id="@+id/vp_ciname"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+            </FrameLayout>
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/vp_ciname"
+                android:background="@color/white"
+                android:padding="10dp"
+
+                >
+
+                <ImageView
+                    android:id="@+id/little_flag1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/cinema_ic_recommend" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/little_flag1"
+                    android:text="推荐电影"
+
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/saixuan_cinema"
+                    android:drawableLeft="@mipmap/cinema_ic_filter_blue"
+                    android:gravity="center"
+                    android:text="筛选"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <com.qianfeng.myapplication.view.ListViewForScrollView
+                android:id="@+id/lv_cinema"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cinema_filter">
+
+            </com.qianfeng.myapplication.view.ListViewForScrollView>
+        </LinearLayout>
+    </com.qianfeng.myapplication.view.MyScrollView>
+
+
+    <!--悬浮-->
+    <RelativeLayout
+        android:id="@+id/cinema_filter"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/top"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/little_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/cinema_ic_recommend" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/little_flag"
+            android:text="推荐电影"
+
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/saixuan_cinema"
+            android:drawableLeft="@mipmap/cinema_ic_filter_blue"
+            android:gravity="center"
+            android:text="筛选"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup_main_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <RadioButton
+            style="@style/footerRadioButtonStyle"
+            android:drawableTop="@drawable/selector_home_tab_movie"
+            android:text="@string/home_tab_movie" />
+
+        <RadioButton
+            style="@style/footerRadioButtonStyle"
+            android:drawableTop="@drawable/selector_home_tab_cinema"
+            android:text="@string/home_tab_cinema" />
+
+        <RadioButton
+            style="@style/footerRadioButtonStyle"
+            android:drawableTop="@drawable/selector_home_tab_kota"
+            android:text="@string/home_tab_kota" />
+
+        <RadioButton
+            style="@style/footerRadioButtonStyle"
+            android:drawableTop="@drawable/selector_home_tab_privilege"
+            android:text="@string/home_tab_privilege" />
+
+        <RadioButton
+            style="@style/footerRadioButtonStyle"
+            android:drawableTop="@drawable/selector_home_tab_homepager"
+            android:text="@string/home_tab_homepager" />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/view_main_line"
+        android:layout_width="match_parent"
+        android:layout_height="1.2px"
+        android:layout_above="@id/radioGroup_main_footer"
+        android:background="@color/default_line_indicator_unselected_color"
+        />
+    <FrameLayout
+        android:id="@+id/frameLayout_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/view_main_line"
+        android:background="@color/white" />
+</RelativeLayout>
+<!-- From: file:/D:/AndroidStudioProjects/KoMovie/app/src/main/res/layout/activity_main.xml -->
